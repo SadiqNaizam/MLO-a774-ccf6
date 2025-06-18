@@ -4,89 +4,108 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core Colors - Light Mode */
+    --background: 0 0% 100%; /* White */
+    --foreground: 220 15% 25%; /* Darker Gray */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 220 15% 25%; /* Darker Gray */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 220 15% 25%; /* Darker Gray */
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 210 70% 50%; /* Neutral Blue */
+    --primary-foreground: 0 0% 100%; /* White */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 70% 95%; /* Light Neutral Blue */
+    --secondary-foreground: 210 70% 30%; /* Darker Neutral Blue */
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 220 20% 92%; /* Light Slate Gray */
+    --muted-foreground: 220 15% 55%; /* Slate Gray */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 210 70% 50%; /* Neutral Blue (same as primary) */
+    --accent-foreground: 0 0% 100%; /* White */
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Semantic Colors - Light Mode */
+    --destructive: 0 84% 60%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --warning: 35 90% 60%; /* Orange */
+    --warning-foreground: 0 0% 0%; /* Black */
+    --success: 140 60% 45%; /* Green */
+    --success-foreground: 0 0% 100%; /* White */
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* UI Element Colors - Light Mode */
+    --border: 220 20% 88%; /* Slate Border */
+    --input: 220 20% 88%; /* Slate Border */
+    --ring: 210 70% 50%; /* Neutral Blue (for focus) */
 
-    --radius: 0.5rem;
+    /* Corner Rounding */
+    --radius: 0.375rem; /* 6px */
 
-    --sidebar-background: 0 0% 98%;
+    /* Typography */
+    --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-mono: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar Colors - Light Mode */
+    --sidebar-background: 220 30% 97%; /* Very Light Cool Gray */
+    --sidebar-foreground: 220 10% 40%; /* Medium-Dark Cool Gray */
+    --sidebar-border: 220 20% 88%; /* Slate Border */
+    --sidebar-ring: 210 70% 50%; /* Neutral Blue (matches main ring) */
+    
+    --sidebar-hover-background: 220 25% 92%; /* HSL values for hover bg */
+    --sidebar-hover-foreground: 220 10% 30%; /* HSL values for hover text */
+    
+    --sidebar-active-background: hsl(var(--primary) / 0.1); /* Full HSL string with alpha */
+    --sidebar-active-foreground: hsl(var(--primary));     /* Full HSL string */
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Core Colors - Dark Mode */
+    --background: 220 20% 10%; /* Dark Charcoal/Slate */
+    --foreground: 220 20% 90%; /* Light Slate Gray */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 20% 13%; /* Slightly Lighter Dark Charcoal */
+    --card-foreground: 220 20% 90%; /* Light Slate Gray */
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 13%; /* Slightly Lighter Dark Charcoal */
+    --popover-foreground: 220 20% 90%; /* Light Slate Gray */
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 70% 65%; /* Brighter, Desaturated Blue */
+    --primary-foreground: 210 70% 15%; /* Dark Blue */
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 70% 25%; /* Darker Desaturated Blue */
+    --secondary-foreground: 210 70% 85%; /* Lighter Desaturated Blue */
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 20% 20%; /* Dark Slate Gray */
+    --muted-foreground: 220 15% 65%; /* Medium Light Slate Gray */
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 70% 65%; /* Brighter, Desaturated Blue (same as primary) */
+    --accent-foreground: 210 70% 15%; /* Dark Blue */
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    /* Semantic Colors - Dark Mode */
+    --destructive: 0 70% 55%; /* Brighter Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --warning: 40 80% 65%; /* Brighter Orange */
+    --warning-foreground: 0 0% 0%; /* Black */
+    --success: 140 60% 60%; /* Brighter Green */
+    --success-foreground: 0 0% 0%; /* Black */
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* UI Element Colors - Dark Mode */
+    --border: 220 20% 25%; /* Dark Slate Border */
+    --input: 220 20% 25%; /* Dark Slate Border */
+    --ring: 210 70% 65%; /* Brighter, Desaturated Blue (for focus) */
+
+    /* Sidebar Colors - Dark Mode */
+    --sidebar-background: 220 15% 12%; /* Dark Cool Gray */
+    --sidebar-foreground: 220 15% 75%; /* Medium-Light Cool Gray */
+    --sidebar-border: 220 20% 25%; /* Dark Slate Border */
+    --sidebar-ring: 210 70% 65%; /* Brighter Blue (matches main ring) */
+
+    --sidebar-hover-background: 220 15% 18%; /* HSL values for hover bg */
+    --sidebar-hover-foreground: 220 15% 85%; /* HSL values for hover text */
+
+    --sidebar-active-background: hsl(var(--primary) / 0.15); /* Full HSL string with alpha */
+    --sidebar-active-foreground: hsl(var(--primary));      /* Full HSL string */
   }
 }
 
@@ -97,5 +116,11 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sans);
   }
+
+  /* Example for monospaced font usage, if needed globally for certain tags */
+  /* pre, code, kbd, samp {
+    font-family: var(--font-mono);
+  } */
 }
